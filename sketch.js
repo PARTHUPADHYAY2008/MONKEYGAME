@@ -3,6 +3,7 @@ var monkey , monkey_running
 var banana ,bananaImage, obstacle, obstacleImage
 var FoodGroup, obstacleGroup
 var score
+var st=0
 
 function preload(){
   
@@ -49,7 +50,8 @@ background(255);
   monkey.collide(ground);
   
   
- 
+ st=Math.ceil(frameCount/frameRate())
+  text("survival Time: "+ st, 100,50)
   
   
   drawSprites();
